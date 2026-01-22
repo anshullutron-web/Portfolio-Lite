@@ -1,15 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Lite</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Lite</title>
+<link href="style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header style="display: flex; text-align: center; justify-content: center; background-color: black;">
-        <h6 style="color: white;">info@yourdomain.com</h6>
-        <h6 style="color: white;">+18000-200-1234</h6>
-        <h6 style="color: white;">Open Hours: Mon - Sat 9.00 - 18.00</h6>
-    </header>
+
+<header style="background-color: black;">
+    <ul>
+        <li>info@yourdomain</li>
+        <li>+ 18000-200-1234</li>
+        <li>Open Hours: Mon Sat 9.00 - 18.00</li>
+    </ul>
+    <h6 style="color: white;"></h6>
+    <h6 style="color: white;"></h6>
+    <h6 style="color: white;"></h6>
+</header>
+
+<header class="nav">
+  <div class="container nav-flex">
+    <img src="logo.png" alt="MOROX" style="height: 50px; padding-left: 80px;">
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>I’m a Creative<br>Designer & Developer</h1>
+      <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+      <br>
+      <a class="btn" style="color: white;">Get Started</a>
+      <a class="btn" style="color: white;">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <h1 style="text-align: center;">Why Choose Us</h1>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde delectus excepturi sed dignissimos facilis ducimus sit odit quo velit quis sequi ipsam fugit, aperiam fuga doloribus fugiat alias illum voluptate. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas esse asperiores minima, ab consectetur, porro distinctio maxime cum culpa doloremque. Nemo vero eos dolore assumenda error minus at adipisci beatae commodi voluptatem! Omnis sint perferendis architecto amet voluptate tempora quis hic culpa excepturi sed aperiam deleniti beatae, facere distinctio?</p>
+    <div class="cards">
+      <div class="card"><b style="color: black;">Strategy & Reasearch</b>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+      <div class="card"><b style="color: black;">Design & Development</b><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="card">
+        <b style="color: black;">Management & Marketing</b><br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+      <div class="card">
+        <b style="color: black;">Analysing & Checking</b><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container about-grid">
+    <img src="about.png" style="width: 100%; height: 100%;">
+    <div>
+      <h2>About Us</h2>
+      <h4>Who We Are</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+      <br><br>
+      <a class="btn-outline">Read More</a>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <h2 class="center">Our Services</h2>
+    <br>
+    <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi doloremque non cumque optio tenetur dolorum mollitia aperiam quas repellat porro! Modi quia, dicta possimus reprehenderit facere odio quo nesciunt quaerat!</p>
+    <br>
+    <div class="service-grid">
+      <div class="service-box">Market Research
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, tempore.</p>
+      </div>
+      <div class="service-box">Transport Consulting
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, facilis!</p>
+      </div>
+      <div class="service-box">Banking Investigation
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, officiis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills">
+  <div class="container skills-grid">
+    <div>
+      <h2>Our Skills</h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veniam temporibus deserunt ipsum adipisci ipsa eligendi optio ullam ducimus eos. Blanditiis temporibus omnis cum facere. Eligendi maiores nobis libero dignissimos?
+      <br><br>
+      <label for="a" style="color: black;">Web Design</label>
+      <div class="bar"><span style="width:90%"></span></div>
+      <label for="a" style="color: black;">Graphic Design</label>
+      <div class="bar"><span style="width:80%"></span></div>
+      <label for="a" style="color: black;">Web Development</label>
+      <div class="bar"><span style="width:70%"></span></div>
+      <label for="a" style="color: black;">Photoshop</label>
+      <div class="bar"><span style="width:85%"></span></div>
+    </div>
+    <img src="skills.jpg" style="height: 100%; width: 100%;">
+  </div>
+</section>
+
+<section class="works">
+  <div class="container">
+    <h2 class="center">Recent Works</h2>
+    <br>
+    <p>We provide high standard clean website for your business solutions.</p>
+    <br>
+    <div class="work-grid">
+      <img src="portfolio-01.jpg" style="width: 300px; height: 300px;">
+      <img src="portfolio-03.jpg" style="width: 300px; height: 300px;">
+    </div>
+  </div>
+</section>
+<br><br><br><br>
+<section class="counter">
+  <div class="container counter-grid">
+    <div><h3>2200</h3><p>Projects</p></div>
+    <div><h3>1800</h3><p>Clients</p></div>
+    <div><h3>780</h3><p>Awards</p></div>
+    <div><h3>420</h3><p>Coffee</p></div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="container">
+    <h2 class="center">Our Team</h2>
+    <br>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, harum?</p>
+    <br>
+    <div class="team-grid">
+      <img src="team-01.jpg">
+      <img src="team-02.jpg">
+      <img src="team-03.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="container">
+    <h2 class="center">Pricing Plan</h2>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Basic</h3>
+        <h1>$27</h1>
+        <a class="btn">Choose</a>
+      </div>
+      <div class="price-card active">
+        <h3>Standard</h3>
+        <h1>$99</h1>
+        <a class="btn">Choose</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="container">
+    <h2 class="center">Our Blog</h2>
+    <div class="blog-grid">
+      <div class="blog-card"><img src="blog-001.jpg"><p>Blog Post</p></div>
+      <div class="blog-card"><img src="blog-002.jpg"><p>Blog Post</p></div>
+      <div class="blog-card"><img src="blog-01.jpg"><p>Blog Post</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container contact-grid">
+    <form>
+      <input placeholder="Name">
+      <input placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button class="btn">Send</button>
+    </form>
+    <div class="map">MAP</div>
+  </div>
+</section>
+
+<footer>
+  <p>© morox business theme, All Rights Reserved | Designed by GEC Designs</p>
+</footer>
+
 </body>
 </html>
