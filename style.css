@@ -19,23 +19,26 @@ body{
 .topbar{
     background:#000;
     color:#fff;
-    font-size:13px
+    font-size:13px;
+    position:sticky;
+    top:0;
+    z-index:998;
 }
 .topbar-flex{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    height:32px
+    height:32px;
 }
 
-
-.nav{background:#fff;
+.nav{
+    background:#fff;
     border-bottom:1px solid #eee;
-    position:fixed;
-    top:33px;
+    position:sticky;
+    top:0;
     left:0;
     width:100%;
-    z-index:1000;
+    z-index:999;
 }
 .nav-flex{
     display:flex;
@@ -45,7 +48,7 @@ body{
 }
 nav a{
     margin-left:25px;
-    font-size:14px
+    font-size:14px;
 }
 
 
@@ -200,7 +203,7 @@ clip-path:polygon(0 0,100% 0,100% 100%,0 100%)
 
 
 .about{
-    padding:90px 0
+    padding:20px 0
 }
 .about-grid{
     display:grid;
@@ -225,6 +228,28 @@ clip-path:polygon(0 0,100% 0,100% 100%,0 100%)
     font-size:14px;
     color:#555;
     margin-bottom:15px
+}
+.arrow-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    transition:color .3s ease;
+    position:relative;
+}
+
+.arrow-btn::after{
+    content:"→";
+    display:inline-block;
+    transition:transform .3s ease, margin-left .3s ease;
+    margin-left:6px;
+}
+
+.arrow-btn:hover{
+    color:#0abf9e;
+}
+
+.arrow-btn:hover::after{
+    margin-left:14px;
 }
 
 
@@ -324,27 +349,47 @@ border-radius:20px
     margin-bottom:30px
 }
 .skill-row{
-    margin-bottom:20px
+    margin-bottom:20px;
 }
+
 .skill-row span{
     display:block;
     font-size:13px;
-    margin-bottom:6px
+    margin-bottom:6px;
 }
+
 .skill-bar{
-background:#eee;
-height:6px;
-border-radius:5px;
-overflow:hidden
+    background:#eee;
+    height:6px;
+    border-radius:5px;
+    position:relative;
 }
-.skill-bar div{
-height:100%;
-background:#0abf9e;
-color:#000;
-font-size:5px;
-text-align:right;
-padding-right:5px
+
+.skill-bar > div{
+    height:100%;
+    background:#0abf9e;
+    border-radius:5px;
 }
+
+.skill-value{
+    position:absolute;
+    top:-16px;
+    background:#000;
+    color:#fff;
+    font-size:11px;
+    padding:4px 7px;
+    border-radius:3px;
+    white-space:nowrap;
+    transform:translateX(-50%);
+}
+.skill-bar > div{
+    position:relative;
+}
+
+.skill-bar > div + .skill-value{
+    left:calc(var(--skill, 100%));
+}
+
 .skills-image img{
 clip-path:polygon(12% 0,100% 0,88% 100%,0 100%);
 height: 100%;
@@ -356,7 +401,7 @@ width: 100%;
 
 
 .works{
-    padding:90px 0;
+    padding:60px 0;
     text-align:center
 }
 .filter-tabs{
@@ -391,56 +436,93 @@ margin-top:40px;
 
 .stats{
     background:#0abf9e;
-    padding:20px 0
+    padding:20px 0;
 }
+
 .stats-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     text-align:center;
     color:#fff;
 }
-.stat-icon{
+
+.stat-icon,
+.stat-icon1,
+.stat-icon2,
+.stat-icon3{
     width:60px;
     height:60px;
     border-radius:50%;
     background:#fff;
     margin:0 auto 15px;
-    background-image: url("img/b1.png"); 
-    background-size: cover;
+    background-size:cover;
 }
-.stat-icon1{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#fff;
-    margin:0 auto 15px;
-    background-image: url("img/b2.png"); 
-    background-size: cover;
-}
-.stat-icon2{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#fff;
-    margin:0 auto 15px;
-    background-image: url("img/b3.png"); 
-    background-size: cover;
-}
-.stat-icon3
-{width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#fff;
-    margin:0 auto 15px;
-    background-image: url("img/b4.png"); 
-    background-size: cover;
-}
-.stat h3{
-    font-size:32px
-}
+
+.stat-icon{background-image:url("img/b1.png")}
+.stat-icon1{background-image:url("img/b2.png")}
+.stat-icon2{background-image:url("img/b3.png")}
+.stat-icon3{background-image:url("img/b4.png")}
+
 .stat p{
     font-size:11px;
-    letter-spacing:1px
+    letter-spacing:1px;
+}
+
+.count{
+    font-size:32px;
+    font-weight:bold;
+    color:#fff;
+    min-height:40px;
+}
+
+
+.count-2200::after{
+    content:"0";
+    animation:count2200 1.2s forwards;
+}
+
+.count-1800::after{
+    content:"0";
+    animation:count1800 1.2s forwards;
+}
+
+.count-780::after{
+    content:"0";
+    animation:count780 1.2s forwards;
+}
+
+.count-420::after{
+    content:"0";
+    animation:count420 1.2s forwards;
+}
+
+
+@keyframes count2200{
+    0%{content:"0";}
+    30%{content:"600";}
+    60%{content:"1400";}
+    100%{content:"2200";}
+}
+
+@keyframes count1800{
+    0%{content:"0";}
+    30%{content:"500";}
+    60%{content:"1200";}
+    100%{content:"1800";}
+}
+
+@keyframes count780{
+    0%{content:"0";}
+    40%{content:"300";}
+    70%{content:"550";}
+    100%{content:"780";}
+}
+
+@keyframes count420{
+    0%{content:"0";}
+    40%{content:"150";}
+    70%{content:"300";}
+    100%{content:"420";}
 }
 
 
@@ -466,7 +548,7 @@ margin-top:40px;
 
 .review{
     background:#cfe5df;
-    padding:90px 0
+    padding:100px 100px 0px
 }
 .review-grid{
     display:grid;
